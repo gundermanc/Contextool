@@ -4,7 +4,7 @@
 // </copyright>
 //------------------------------------------------------------------------------
 
-namespace ContextoolExtension
+namespace Contextool
 {
     using System;
     using System.Diagnostics.CodeAnalysis;

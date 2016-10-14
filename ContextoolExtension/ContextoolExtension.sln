@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContextoolExtension", "ContextoolExtension\ContextoolExtension.csproj", "{F2D5B9EE-BD57-4205-85AA-5F764C5361C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contextool", "ContextoolExtension\Contextool.csproj", "{F2D5B9EE-BD57-4205-85AA-5F764C5361C0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contextool.Project", "Contextool.Project\Contextool.Project.csproj", "{13AB786C-FEE9-4691-8BA1-18889A445E88}"
 EndProject

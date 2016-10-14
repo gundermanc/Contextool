@@ -11,7 +11,7 @@ namespace Contextool.Project
     /// project. There is exactly one per VS instance, whether or not a Contextool
     /// project is present.
     /// </summary>
-    public class ContextoolSolutionContext
+    public sealed class ContextoolSolutionContext
     {
     }
 }
