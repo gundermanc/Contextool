@@ -1,5 +1,5 @@
 ﻿//------------------------------------------------------------------------------
-// <copyright file="ContextoolPackage.cs" company="Company">
+// <copyright file="ContextoolPackage.cs" company="Christian Gunderman">
 //     Copyright (c) Christian Gunderman.  All rights reserved.
 // </copyright>
 //------------------------------------------------------------------------------
