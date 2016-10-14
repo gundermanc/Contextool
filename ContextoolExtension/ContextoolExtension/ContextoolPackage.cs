@@ -1,16 +1,16 @@
 ﻿//------------------------------------------------------------------------------
 // <copyright file="ContextoolPackage.cs" company="Company">
-//     Copyright (c) Company.  All rights reserved.
+//     Copyright (c) Christian Gunderman.  All rights reserved.
 // </copyright>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Diagnostics.CodeAnalysis;
-using System.Runtime.InteropServices;
-using Microsoft.VisualStudio.Shell;
-
 namespace ContextoolExtension
 {
+    using System;
+    using System.Diagnostics.CodeAnalysis;
+    using System.Runtime.InteropServices;
+    using Microsoft.VisualStudio.Shell;
+
     /// <summary>
     /// This is the class that implements the package exposed by this assembly.
     /// </summary>
