@@ -48,7 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContextoolSolutionContext.cs" />
+    <Compile Include="ContextoolContext.cs" />
+    <Compile Include="Contract.cs" />
+    <Compile Include="IContextoolContext.cs" />
+    <Compile Include="Shims\IIDE.cs" />
+    <Compile Include="Shims\IIDELogging.cs" />
     <Compile Include="Shims\IIDESolution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

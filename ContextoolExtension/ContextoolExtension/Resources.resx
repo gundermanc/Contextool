@@ -117,14 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="110" xml:space="preserve">
-    <value>Contextool Extension</value>
+  <data name="ContextoolOutputWindowPaneTitle" xml:space="preserve">
+    <value>Contextool</value>
+    <comment>Something similar to 'Contextool'</comment>
   </data>
-  <data name="112" xml:space="preserve">
-    <value>Contextool Visual Studio Extension Detailed Info</value>
+  <data name="ExceptionInterruptedActionLogMessageFormat" xml:space="preserve">
+    <value>Unable to perform action "{0}" due to exception of type {1} with message "{2}"</value>
+    <comment>Format string for message logging with three params.</comment>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="400" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ContextoolPackage.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ExceptionLogMessageFormat" xml:space="preserve">
+    <value>Caught exception type {0} with message "{1}"</value>
+    <comment>Format string for message logging with two params.</comment>
+  </data>
+  <data name="LogErrorHeader" xml:space="preserve">
+    <value>Error: </value>
+    <comment>String similar to 'Error: '</comment>
+  </data>
+  <data name="LogInfoHeader" xml:space="preserve">
+    <value>Info: </value>
+    <comment>String similar to 'Info: '</comment>
+  </data>
+  <data name="LogWarningHeader" xml:space="preserve">
+    <value>Warning: </value>
+    <comment>String similar to 'Warning: '</comment>
   </data>
 </root>

@@ -9,14 +9,9 @@ namespace Contextool.Internal
     using Contextool.Project.Shims;
 
     /// <summary>
-    /// Defines an interface for the ShimFactory which provides system specific
-    /// dependencies.
+    /// Interface for the ShimFactory which provides all global internal extension services.
     /// </summary>
-    internal interface IShimFactory
+    internal interface IShimFactory : IIDE
     {
-        /// <summary>
-        /// Gets the <see cref="IIDESolution"/> Shim.
-        /// </summary>
-        IIDESolution Solution { get; }
     }
 }

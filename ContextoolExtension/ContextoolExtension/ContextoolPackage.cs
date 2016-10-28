@@ -9,7 +9,10 @@ namespace Contextool
     using System;
     using System.Diagnostics.CodeAnalysis;
     using System.Runtime.InteropServices;
+    using Contextool.Internal;
+    using Contextool.Internal.Commands;
     using Microsoft.VisualStudio.Shell;
+    using ContextoolExtension;
 
     /// <summary>
     /// This is the class that implements the package exposed by this assembly.
@@ -30,8 +33,9 @@ namespace Contextool
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About
-    [Guid(ContextoolPackage.PackageGuidString)]
+    [Guid(PackageGuidString)]
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
+    [ProvideMenuResource("Menus.ctmenu", 1)]
     public sealed class ContextoolPackage : Package
     {
         /// <summary>
@@ -50,6 +54,15 @@ namespace Contextool
             // initialization is the Initialize method.
         }
 
+        /// <summary>
+        /// Gets the private PackageModel instance.
+        /// </summary>
+        private PackageModel PackageModel
+        {
+            get;
+            set;
+        }
+
         #region Package Members
 
         /// <summary>
@@ -59,6 +72,25 @@ namespace Contextool
         protected override void Initialize()
         {
             base.Initialize();
+
+            // Begin extension execution.
+            this.PackageModel = new PackageModel(new ShimFactory(this));
+            this.PackageModel.Start(this);
+        }
+
+        /// <summary>
+        /// Performs teardown of any package resources.
+        /// </summary>
+        /// <param name="disposing">True if the package is being disposed.</param>
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+
+            if (disposing)
+            {
+                this.PackageModel.Dispose();
+                this.PackageModel = null;
+            }
         }
 
         #endregion
