@@ -1,0 +1,17 @@
+<Project>
+
+  <!-- Ensure we're creating non-portable PDBs compatible with VS test runner and Mono.Cecil. -->
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+
+  <!-- Dependency versions -->
+  <ItemGroup>
+    <PackageReference Update="Nerdbank.GitVersioning" Version="2.1.23" />
+    <PackageReference Update="Microsoft.VSSDK.BuildTools" Version="15.7.109" />
+  </ItemGroup>
+
+</Project>
