@@ -4,6 +4,9 @@
     <RepoRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\..\'))</RepoRoot>
     <TargetFramework>net46</TargetFramework>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    
+    <!-- Disable ridiculously pendantic VS threading warning to avoid littering ThrowIfNotOnUIThread() everywhere. -->
+    <NoWarn>$(NoWarn);VSTHRD010</NoWarn>
 
     <!-- Output paths -->
     <BaseOutputPath>$(RepoRoot)bin\$(MSBuildProjectName)\</BaseOutputPath>
