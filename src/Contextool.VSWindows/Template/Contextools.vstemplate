@@ -1,0 +1,19 @@
+﻿<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+    <TemplateData>
+        <Name>Contextool Tools Project</Name>
+        <Description>Managed class library that targets .NET 4.6 and implements lightweight IDE extensions that travel with your code.</Description>
+        <ProjectType>CSharp</ProjectType>
+        <RequiredFrameworkVersion>4.6</RequiredFrameworkVersion>
+        <TemplateID>Contextool.Net46.Tools</TemplateID>
+        <CreateNewFolder>true</CreateNewFolder>
+        <CreateInPlace>true</CreateInPlace>
+        <DefaultName>Contextools</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+        <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    </TemplateData>
+    <TemplateContent>
+        <Project File="Contextool.csproj" ReplaceParameters="true">
+            <ProjectItem>contextool.json</ProjectItem>
+        </Project>
+    </TemplateContent>
+</VSTemplate>
