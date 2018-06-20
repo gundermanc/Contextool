@@ -61,6 +61,24 @@ namespace Contextool.VSWindows {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Build Failed.
+        /// </summary>
+        internal static string BuildFailMessage {
+            get {
+                return ResourceManager.GetString("BuildFailMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Build Succeeded.
+        /// </summary>
+        internal static string BuildSuccessMessage {
+            get {
+                return ResourceManager.GetString("BuildSuccessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unable to open configuration file.
         /// </summary>
         internal static string ConfigurationFileReadError {
@@ -75,6 +93,15 @@ namespace Contextool.VSWindows {
         internal static string ConfigurationNotFoundFormat {
             get {
                 return ResourceManager.GetString("ConfigurationNotFoundFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discovered project &apos;{0}&apos;.
+        /// </summary>
+        internal static string DiscoveredProjectMessage {
+            get {
+                return ResourceManager.GetString("DiscoveredProjectMessage", resourceCulture);
             }
         }
         

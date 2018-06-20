@@ -1,10 +1,12 @@
 ﻿namespace Contextool.VSWindows
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.Composition;
     using System.IO;
     using System.Threading.Tasks;
     using Contextool.Editor.Common;
+    using Contextool.VSWindows.Build;
     using Contextool.VSWindows.Common;
     using Microsoft.VisualStudio.Text;
     using Microsoft.VisualStudio.Text.Editor;
@@ -47,6 +49,18 @@
                     try
                     {
                         var configuration = await Configuration.ReadFromFileAsync(configurationFilePath);
+                        foreach (var projectPath in configuration.Projects)
+                        {
+                            this.logger.LogMessage(string.Format(Strings.DiscoveredProjectMessage, projectPath));
+
+                            var globalProperties = new Dictionary<string, string>();
+                            var projectCollection = new Microsoft.Build.Evaluation.ProjectCollection(
+                                globalProperties, new[] { new BuildLogger(this.logger) },
+                                Microsoft.Build.Evaluation.ToolsetDefinitionLocations.Default);
+
+                            var project = projectCollection.LoadProject(projectPath);
+                            project.Build();
+                        }
                     }
                     catch (Exception ex)
                     {

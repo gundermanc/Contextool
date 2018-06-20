@@ -1,6 +1,8 @@
 ﻿namespace Contextool.Editor.Common
 {
+    using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
     using System.Runtime.Serialization;
     using System.Runtime.Serialization.Json;
     using System.Threading.Tasks;
@@ -16,8 +18,16 @@
 
             using (var file = File.OpenRead(configurationFile))
             {
-                return new DataContractJsonSerializer(typeof(Configuration)).ReadObject(file) as Configuration;
+                var configuration = new DataContractJsonSerializer(typeof(Configuration)).ReadObject(file) as Configuration;
+
+                // Pretty-up values for the callers.
+                configuration.Projects = configuration.Projects ?? Enumerable.Empty<string>();
+
+                return configuration;
             }
         }
+
+        [DataMember(Name = "projects")]
+        public IEnumerable<string> Projects { get; private set; }
     }
 }

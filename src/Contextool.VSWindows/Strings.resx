@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BuildFailMessage" xml:space="preserve">
+    <value>Build Failed</value>
+  </data>
+  <data name="BuildSuccessMessage" xml:space="preserve">
+    <value>Build Succeeded</value>
+  </data>
   <data name="ConfigurationFileReadError" xml:space="preserve">
     <value>Unable to open configuration file</value>
   </data>
   <data name="ConfigurationNotFoundFormat" xml:space="preserve">
     <value>'{0}' file not found for '{1}' file.</value>
+  </data>
+  <data name="DiscoveredProjectMessage" xml:space="preserve">
+    <value>Discovered project '{0}'</value>
   </data>
   <data name="ErrorTextFormat" xml:space="preserve">
     <value>Error: {0}</value>
